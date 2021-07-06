@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>게시판 글쓰기</title>
+        
+        <!-- 1. HTML 요소 선택자 -->
+        <!-- 2. id 선택자 -->
+        <!-- 3. class 선택자 -->
+        <!-- 4. 그룹 선택자 -->
+        <!-- ; 는 구분자 -->
+        <!-- head에 들어간 스타일은 인라인 스타일 -->
+        <style type="text/css"> 
+            body
+            {
+                background-color: aquamarine;
+            }
+            #id{color: rgb(71, 243, 255) }
+            .sgi{color: teal}
+            h1, h2, p{background-color: rgb(37, 56, 231); text-align: center; color: white;}
+            button{background-color: turquoise;}
+        </style>
+        <!-- 스타일 적용의 우선 순위 -->
+        <!-- 1. 인라인 스타일 -->
+        <!-- 2. 내부 / 외부 스타일 시트 -->
+        <!-- 3. 웹 브라우저 기본 스타일 -->
+    </head>
+
+    <body>
+        <p>
+            <select name="free" id="id">
+                <option selected>자유 게시판</option>
+                <option>자숙 게시판</option>
+                <option>자제 게시판</option>
+                <option>자본 게시판</option>
+                <option>자식 게시판</option>
+            </select>
+            제목 : <input type="text">
+            <label> 공개 : <input type="checkbox"></label>
+        </p>
+
+        <textarea name="" id="" cols="60" rows="30"></textarea>
+
+        <p>
+            출처 : <input type="text">
+            <br><br>
+            <button type="submit" class="sgi">쓰기</button>
+            <input type="submit" value="쓰기">
+        </p>
+
+        <p>
+            <!-- 내부 / 외부 스타일 -->
+            <b style="color: teal; background-color: turquoise;">나는 똥멍청이 !!</b>
+        </p>
+
+    </body>
+</html>

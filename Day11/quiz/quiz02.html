@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for (var i = 0; i < 5; i++) {
+        //     alert("삐빕");
+        // }
+
+        var array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+        var sum = 0;
+
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        console.log("합계 : " + sum);
+        sum = 0;
+
+        // 인덱스 기반
+        for (var idx in array) {
+            sum += array[idx];
+        }
+        console.log("합계 : " + sum);
+        sum = 0;
+
+        // 값 기반
+        for (var val of array) {
+            sum += val;
+        }
+        console.log("합계 : " + sum);
+        sum = 0;
+
+        var goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
+        
+        console.log("제품 : " + goods.name + ", 가격 : " + goods.price + "원, 유통기한 : " + goods.expirationDate);
+        
+        var restaurantList = [
+            {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
+            {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
+            {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+            {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+            {"name":"쿠이", "menu":"양식", "location":"부산"},
+            {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
+        ];
+
+        for (var key of restaurantList) {
+            console.log("상호명 : " + key.name + ", 위치 : " + key.location);
+        }
+    </script>
+</body>
+</html>

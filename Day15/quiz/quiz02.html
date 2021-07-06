@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>111번가 회원가입</title>
+
+    <link rel="stylesheet" href="quiz02_style.css" type="text/css">
+
+    <!-- jQuery가 datepicker 라이브러리 위에 있어야 한다. (데이터피커가 jquery를 사용하기 때문) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- datepicker 라이브러리 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <span class="display-4 text-danger font-weight-bold">111번가</span>
+            <hr>
+        </header>
+        <section class="contents mb-4">
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h1 class="font-weight-bold mb-4">가입 정보 입력</h1>
+                    <h5 class="text-secondary">111번가의 다양한 혜택을 누려 보세요 !!!</h5>
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h6 class="font-weight-bold mt-3 mb-3">아이디</h6>
+                    <input type="text" name="id" id="id" class="form-control">
+                    <div id="idLength" class="text-info">아이디를 4자 이상 입력하세요</div>
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h6 class="font-weight-bold mt-3 mb-3">비밀번호</h6>
+                    <input type="password" name="pw" id="pw" class="form-control">
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h6 class="font-weight-bold mt-3 mb-3">비밀번호 확인</h6>
+                    <input type="password" name="checkPw" id="checkPw" class="form-control">
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h6 class="font-weight-bold mt-3 mb-3">이름</h6>
+                    <input type="text" name="userName" id="userName" class="form-control">
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <div>
+                    <h6 class="font-weight-bold mt-3 mb-3">이메일</h6>
+                    <div class="d-flex align-items-center">
+                        <div><input style="width: 170px !important;" type="text" name="mail" id="mail" class="form-control"></div>
+                        <div>@</div>
+                        <div style="width: 170px !important;">
+                            <input style="width: 170px !important;" type="text" class="form-control" id="selfDomain">
+                            <select name="domain" id="domain" class="form-control align-items-center">
+                                <option class="self">-- 직접 입력 --</option>
+                                <option value="naver.com" selected>naver.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="daum.com">daum.com</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+            <article class="d-flex justify-content-center align-items-center">
+                <button id="signUp" class="btn btn-danger mt-4">가입하기</button>
+            </article>
+        </section>
+        <footer class="mt-4">
+            <hr>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-secondary">Copyright 2021. 111st All Rights Teserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            
+            onCheck = function () {
+                var id = $('#id').val();
+                if (id.trim().length < 5){
+                    alert("아이디 입력이 안되었거나 아이디가 4자 이하입니다");
+                    return false;
+                }
+                if ($('#pw').val().length < 1) {
+                    alert("비밀 번호를 입력해주세요");
+                    return false;
+                }
+                if ($('#checkPw').val().length < 1) {
+                    alert("비밀 번호 확인을 해주세요");
+                    return false;
+                }
+                if ($('#pw').val() != $('#checkPw').val()) {
+                    alert("비밀 번호와 비밀 번호 확인이 일치하지 않습니다");
+                    return false;
+                }
+                var name = $('#userName').val();
+                if (name.trim().length < 1) {
+                    alert("이름을 입력해주세요");
+                    return false;
+                }
+                var mail = $('#mail').val();
+                if (mail.trim().length < 1) {
+                    alert("이메일을 입력해주세요");
+                    return false;
+                }
+                return true;
+            };
+
+            $('#id').on('keyup', function () {
+                var idLength = $('#id').val().trim().length;
+                if (idLength < 5) {
+                    $('#idLength').css('display', 'block');
+                } else {
+                    $('#idLength').css('display', 'none');
+                }
+            });
+
+            $('#domain').change(function () {
+                var selectedDoman = $('#domain option:selected').val();
+                if (selectedDoman == '-- 직접 입력 --') {
+                    $('#domain').css('display', 'none');
+                    $('#selfDomain').css('display', 'block');
+                }
+            });
+
+            $('#selfDomain').on('keyup', function () {
+                var selfDomain = $('#selfDomain').val();
+                $('.self').val(selfDomain);
+            });
+
+            $('#signUp').on('click', function () {
+                if (onCheck()) {
+                    alert("아이디 : " + $('#id').val() + "\n이름 : " + $('#userName').val() + "\n이메일 : "
+                     + $('#mail').val() + "@" + $('#domain').val() + "\n가입이 완료되었습니다");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

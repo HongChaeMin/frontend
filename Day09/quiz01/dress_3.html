@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>베스트 상품</title>
+    <link rel="stylesheet" href="quiz01_1_style.css" type="text/css">
+
+    <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="warp" class="container">
+        <header class="d-flex justify-content-between">
+            <div class="col-4 d-flex align-items-end mb-4">
+                <div class="input-group">
+                    <div></div>
+                    <input type="text" class="form-control" placeholder="Search this blog">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button">
+                        <i class="fa fa-search">검색</i>
+                      </button>
+                    </div>
+                  </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div>
+                    <h2 class="logo">상  맨</h1>
+                    <h5 class="s-logo text-center" >상 남자의 패션몰</h4>
+                </div>
+            </div>
+            <nav class="d-flex align-items-end">
+                <ul class="nav nav-fill">
+                    <li class="nav-item"><a href="#" class="nav-link login">로그인</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link login">회원가입</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link login">고객센터</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link login">장바구니</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="menu d-flex justify-content-center align-items-center">
+            <ul class="nav nav-fill w-100">
+                <li class="nav-item"><a href="#" class="nav-link s-menu">Outer</a></li>
+                <li class="nav-item"><a href="#" class="nav-link s-menu">Top</a></li>
+                <li class="nav-item"><a href="#" class="nav-link s-menu">Shirt</a></li>
+                <li class="nav-item"><a href="#" class="nav-link s-menu">Pants</a></li>
+                <li class="nav-item"><a href="#" class="nav-link s-menu">Accessory</a></li>
+            </ul>
+        </nav>
+        <section class="contents d-flex">
+            <section class="col-6">
+                <div class="d-flex justify-content-center">
+                    <img class="img-size" src="http://d-lineman.com/web/product/big/201802/37.png" alt="">
+                </div>
+                <div class="text">
+                    <h5 class="font-weight-bold">데일리 청자켓</h4>
+                    <del class="text-secondary m-size font-weight-bold">34,000</del>
+                    <h6 class="text-dark font-weight-bold m-size">29,900원</h4>
+                </div>
+            </section>
+            <aside class="col-6">
+                <div class="head1">
+                    <h5 class="font-weight-bold">데일리 청자켓</h4>
+                    <del class="text-secondary m-size font-weight-bold">34,000원</del>
+                    <h6 class="text-dark font-weight-bold m-size">29,00원</h4>
+                </div>
+                <br>
+                <div class="mr-4">
+                    <h5 class="font-weight-bold">색상2 ― </h5>
+                    <select name="fruit" id="fruit">
+                        <option selected>선택</option>
+                        <option value="apple">아이보리</option>
+                        <option value="banana">카키</option>
+                        <option value="strobery">블랙</option>
+                        <option value="bluebery">네이비</option>
+                    </select>
+                </div>
+                <br>
+                <div class="mr-4">
+                    <h5 class="font-weight-bold">수량 ― </h5>
+                    <select name="fruit" id="fruit">
+                        <option selected>선택</option>
+                        <option value="apple">1</option>
+                        <option value="banana">2</option>
+                        <option value="strobery">3</option>
+                        <option value="bluebery">4</option>
+                        <option value="bluebery">5</option>
+                    </select>
+                </div>
+                <br>
+                <div class="d-flex justify-content-end mr-4">
+                    <button type="button" class="btn btn-outline-secondary">--주문하기--</button>
+                </div>
+                <br>
+                <div class="d-flex justify-content-end mr-4">
+                    <button type="button" class="btn btn-outline-secondary">--주소 선택하기--</button>
+                </div>
+            </aside>
+        </section>
+        <section class="content2">
+            <div class="display-4 font-weight-bold">Best seller</div>
+            <div class="d-flex align-items-center justify-content-center bg-secondary pt-4">
+                <ul class="nav nav-fill">
+                    <li class="nav-item best"><a href="http://127.0.0.1:5500/Day09/quiz/quiz01_1.html" class="nav-link">
+                        <img class="img-size1" src="https://i.pinimg.com/originals/33/8f/92/338f92828ddcc3ff6b78a4847ded8b2e.jpg" alt="옷1">
+                        <h5 class="head2">[1+1] 쫀쫀 목폴라</h4>
+                        <del class="text-white m-size font-weight-bold">15,000원</del>
+                        <h6 class="text-white font-weight-bold m-size">7,500원</h4>
+                    </a></li>
+                    <li class="nav-item best"><a href="#" class="nav-link">
+                        <img class="img-size1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4PobCxgmJ3-N8XqbsBKc_a-tdspn4f-ZF0g&usqp=CAU" alt="옷1">
+                        <h5 class="head2">따뜻한 가을 니트 조끼</h4>
+                        <del class="text-white m-size font-weight-bold">17,000원</del>
+                        <h6 class="text-white font-weight-bold m-size">14,500원</h4>
+                    </a></li>
+                    <li class="nav-item best"><a href="#" class="nav-link">
+                        <img class="img-size1" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYZGBgaGhocHBwaGhgeHBoaHBoZGhocGhgcIS4lHCErHxoaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhESGDQhISs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQxNDQ0NDE0NDQ0NDQ0NP/AABEIAPsAyQMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQECAwYABwj/xABJEAACAQIEAwUFBQMIBwkAAAABAhEAAwQSITEFQVEiYXGBkTKhscHRBhMUUvBCYnIVU4KSk9Lh8QcjVGOUotQWJDNDVWWywuL/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/EACARAQEAAwEBAAIDAQAAAAAAAAABAhExIRIDQSJRcTL/2gAMAwEAAhEDEQA/APqdRU1FQpFQakms2ag1bhpffvgURibmlIsVd3pCRpiOIAc6AfHk7CsESvOsaASaj6aTGIfFOdtB1+lA8VY/cXTucjH0FF2LTAQ0d3hyn9dKKw2FV3COAVbRgdiCNQandq9SORtwQOhpghCiBPnTrGfYS6jE2HV0JkK5KsvdmAIbxMedUtfY++FZr7IiKCSEYszwD2ZgBR36nu51Pzkr7x1vY/gN2LKsNQ0t4gnQ+mvnTWziQ2x8uYpXhkCIqAABVUADYQI0oZb8XIHSTrz5VrjdMssfq7dMj1oGpPhsbyb1+tMUuSAQZBq5dsrLBQNWFYq9WD1SWwqwrNTWgNAIvtArO9qyNFZkZiRIKrdTOvmmZT/GKfzzNYGwC4c8lgDoSQSfHRR5HrWlts0nlOnlpPrMdwB56AD4vFKABkdydkQCWHU5mUFepJy60vxGLvoADaRBqFRLsMwGkALbZjpB7AXL1I1rbH8VyoWQdmQM5Bh25LbQKWuvvAVSDBFcbxXF30DPicScOHWVs2ylu4VM5XxN6XdRIYBFdiYgRDQAVxb7SYpXSzYsWbd94DoLgvYhR+8QmS2Y1ly2msaGtPw/E/8AaB/xeG/6Kuc4dgrCJ2cA2JLEziMS5s4fXtdhX0ZB+aJYnfUCk+Rf57hP9Rf+npE+71BqxqppLVNYua0Y1g5oMJjG0pBffem/EXgUhvtWeV8XjFrBkVZ17QPiPn8qGwlzUjz+R+XrRLtp6VDRKLzrTDNDyOWvvFQdqnCbsf3fmKc6WXHYWLhga0t+0OLOTJPtQD5mIozAt2Ae6kfFHzOv8Xw1rW8YyesHNAOZNFX3oUCT+v11rNtGhOhjwHidBTjh7yncCQPKPnNInY5gBy1H8RESe4A+ebup5wtQLYjadPdrVYdRnwYDV1NVq6CtWLVa0U1nVlNAazppvyoRsUgQkRkU5Ek6XCsgqoAJYCI0BLQYBHtexodlyIYLaFjMKv7R0IMxoACDJmRFes2Ft+yC7wBJjNl2AnRbaaeyoA00BO4HN8WxeJLBly4ded+6oa6tqYZrdmStlToqhizsxUEDcI8EtmzdfFPLuxKW3vN97euMoBuMiEgNlUBTclEXtalVWul+0N97ajKguYh2VUTNCgs6obmknsZgodguUsSAJiuC4lw65bd8N94tzKE/EXLaNnJdybWFRmYgZmZSFCqJlmzZWFBVhjeLXcS5djmBzKiu0hwAM73XgBbKhSWCKiNEZTDEY/yl/wC5P/wz/Wm9n7HW2u27F1pa2ivirheEtqQPusMknLmIElt47Qjauv8A5O4P+XA/2lv+/U+l668mqk1JNUY0NENQzmtmNCXnigQr4q/KlDJReOuSaAcE86yya4wPh3/1sfuN7mX60e2oNJkcfiABrFt/PtIPnTVblS0bB5UH9Tz99bYPQOe6grTTI6H3EA/GaIL5Uaqx6jLjpcM8YdT3Ck+JeXTuBPuj50XfuRh08B8KVWXlgein4iry4zx68/Ws7cnpr+hU4lo06mPr7pqmIICNOkiNOWbs6es1m1DYMNcLOYCEmADJYDQSeQgCumwBlPA/IVz9mFAVRAAgAREdKfcMUhBIiSTpV4dRnwYK0WqAVoK1YpFXFUFWBoCxnYaDrp7ht6+hqmIvC2kxJmFBMFmOwLHbaSx2AJOgrQGsxbl8x5CFHSdWbxPZH9HvNAIuIY04e011LTYi7I7ZhEa4/YtomY5isvlVUDCGMtJZil4Z9msVDC5i0tC27u72reZ7l10zXHN1zoyo2QMqiAzrpBnqOKIz3rCxK2y19hOjXFGSwp7szu08jaB5URicPFr7rf7w5GO2YOS15u4lTcbxoDksN/o9w72g983bl91DMXuE5bjgDUgAtlJAJJ1y8qZ/9gsB/Mt/aXP71dO5+tC/j7X87b/tE+tLz+hqDiaoxqWNYXHpKUuPS7F3dKIvPSvFPNIy3F5v2THvHmJE+tJsTeZSZGg5gyPTdfeO+nd8Uh4quh38RuPqKyy62x4B4feDYoMrSPu2GmomQflXRkVzfC7WULc55iSeo1Xb+Gukfuos0eNThT2m/o/OjHtErQmCHaPh8P8AOq4fiTC64OqZojoBpp6TTx6jPh3cBewAN0keXI0o4HfzhjzXsnx1p2gCmNwRIPIg1zvCbf3V3FIfZDq6/wALKSfepqskwVibwDknZYHmYJ+VAcVxgJRM0FszeSgD3lvdSvifFMsk6SZoLhnFFd2JUu0BVgTAEmTOn7Xuqa0jsMLagBmMmJA5DyroeHmUHiYrlMHimOkqSN0bsuPDlXV8NcNbUjnPiDtB76eHUfk4LFXFUFXFbMXhVhVRVqAkVcGsgai7nIhCqnqylvRQRr5+RoDHiXEbOGU3bzqiwBmY6nLJCqo1Y6kwATrXJ3/thicQY4fg3uAbXboyp0lQWVTpO7A66rTnF4DCYecTiWDuP/Nvw5HMLbQDKp6KignvOtI7/wBpcdjOzw/Dsls6DEXQACOqBuzHgHPcDQQLH8AxLrn4pxBLVsn2FPZPcF7KZvBXPjSj8DwT/asT/Zt/01RxTh+Fw7M+NxTYvFAH/VW2JGaNFuXT2lUE8ihA2U7VzP4r/dL/AFT9ai/4H6HZqGuNV3ahnahoHvtS+7Rl40K60ADeQnp51zvFSYImD0PyNdNiVpLxOwHGU7EgT0k7is71rOAGbLYRojsJ6tAn1M03tPIHhQfEElGUCdCANvATyro/sXhrVzDC5cWXYsrBj7BViAoEgglYaec9IFGfhTKQp/EqjAswBMgAkCSAWIHXQTWvCgojY1px37MJiMOXsBndGZQraHKzZXCHQTkHOZ1jWK4fDcPC+w7AjfdYPMTIjwijHKaFn1fH0nGXgqCDqu3h0pFjMepztMFgoPlP1NI04feeALrrPMuzKO8iJIro8B9mhZhnZrrkAhmIKwdQUVezHeZPfT6Pn5cRicBexLwi9ifaJAUdTrv5TXXcJ4OLSBQIgCY2bqTHOnVzDgkNAkdR8xrUqRsdP1yNCmTWJG09O7rBp5gLWVB36nxP6FL8OFzSx26Tr5CjzjV7z5H51eOP7Y55foWKkUAcb+6f+X61U4p+SjzY/SrZmM1BaljYh+oHkT868bj82Hp/nQZnNUv3io7K5mOirMAn95oOVRzaD3AkgFeC35z7vkKpftMykK7ITpmGpA/dDSJ7yD4UAm40+EwzrfxzficSf/DtwCqSRAtWCcqLIHbckkjedKVY/EcQxilrrrgMKB2pLKxWP2jozdIYouux5l4p8PhXy2LTYnGOddWe4NAM1x9SixGgA5bDWuS4lde9dAxDtibs9nD2DKIeYLrIBGoIQO2mrqaVpVfDvYt3kXh9lsTctq5Ny8DkzGArKggBFGfVsurKZOUS5/lzif8At2E/tMP9KUW8IWYWLsO2/wCEwzZUXKBLYm8CQuWNSS7jmVp9/Irf+n4T0uf3aWg+gXbg60DdxiD9pfUUu+7n2RUGyo3hj+VQPefEdwqdtG745PzegJ+FYPj0/e/qN9KpiLCEa9joQQD6bHw1pcXK7gOOuUA+gonoW4pjiQMoYA5u1pyy6aGRM/8AKa5l+IFLgBn82pMGDz+tN+IurII03mCeY3g7RFJr2GUoM4Z3GmYZepg7iDESIqcuunGbxRjuK3A8qoZCQsjWGJgjMNm5QelZY5Wy5A4GdoyyYc7qPHTnzHhW6IygsSXzFBBjNJypuNDAA3/KTR2Ow2bLAGYZcrQDlb2cwnSQDNRZ9X1j8eWWuj+xP2oW1hhaxIZGQtDGDnViWGbmGliIPQEmZATX1R7z3VB7bswB2UMZgcp8J3qlrDTJBjlEDWO+pCMNwxjnJI5/sgRO2s0Sab4Y448pklxQKx4X9pEe3eQkZ7V4/dJmRWdG0dRnIEZw530LJy3CRHf2uyOnP1G3l60WmBtxDIp8oI8CNR5VUyT+T3hzjMelpc7sEH72h03EbyOfShUxZf2FhDzka/wxsD1pPieBg5yjsxYKMtxiwAUk6MZOpMmZk86LwGH+5QwpAUFiq65tycijQN4b8xzDZnKAqIJzGNzp4TGk99EW2kKfzAEefz1FJ7uMi9ocyOEYEbaqIYdxEUx4M+aJ3RQAO8DU+oNaY3bLKaELrHKpZ+QEk6RzrMPyGp6fraiLKhNTBc7n8o7ulWhYpl5hmJ16R0FeyD9b1SSSROvfse41ZWgdI5fIGgJCefxqt+6qr2yQNBpmknkFy6knaBqdq2iKgIJk6kbd3Xz38vEyjc3xLh73FbO64PCgFnW3kFy4Bubjjsov7ozTOs8uXxOMCqEw1t8Nh7misoZsXjB/u1PaFs6wSQuvP2K+gcSwWfKCoeCCqN7AcSc9wDVwvJdpjnDKhx9kWDcZWc3SoOIxLAG4iMYS1Z/ZR30VEGiiCZOWVoVzL2Pw9i8ub7t0t5/ubbSFZXtrGIvrBu3AbqHIOwg5AkCvp38op3etfK7btcTESqoi4S6yIskIoxVoEBjq2tpiWOrHMx3pJ/LVzr7zRtO32fiFxEEuxiNEEa77DfnGpjakF/iF1yFshE/jUtI/osuUacprorthXMuocgQDAzjzIhvP1pTieEXLhIa4pQTpbRlaD+ZGJyjT95TFKSNbfCfhPEjfDZlyuhhgDmUgzBVoGhjajyhO3nCz/lVrli3h7ZYCFGpO7MTpufaJNTa4iCoi2VHLNp/y6knu36xRSgPEYcbsTpzMCPcKS4kjOVBJgA6iDrMd/I0/vo7xJyj3+Q1C+Mk99CPw5I00PXmT39anKbi8crP34W4ZBIJGo2POteNvlwzvr2ch039tNq3/AAZGzDzkVnjMIzrkYwsgnLDZo2BDLEc/IVExu13Ka8H4RwyhgZBE+INFqJpTgrRtgKJKjkEyx4QSPIAU1tsCJFO4iVb7upy1INeY1OlKxRmFFCKRrzNFWTBA6iaJSsB4rhhRRBzKJA6qsnKp8AcoPQCieHuQ6H97Ke8N2fnTK6My/Gh+HYEMxLfssMsHXMJOvp8avHe2eWtetcOsOV5hjJ5wNK1G7dQ0DvkA/OtMM4JgqA0kk/mkzPdRSqvQVqyLjbJIyyDMSPXXrA+FE20ZhqOoBjeOo5eNFJVwYFPRBlsudh79I7u6t/wp6iqcPuypHQmPDlRc0GxGF09rXrHpSnj/AAdnshLXaf7zPqVALkMqu5PJCyuAJ1tqAIgU6J0iqM8aUrA5LC/ZlUGJtgyDhbeFQ7ZmNtnuPHe9xTHUHpXyDK38239U1+hGftD186G/kex/Nr6UrBppkNRkPgRsZ1Hga2JqhNNQbEYUvuV3mcup8QNCfKqJw1RrJmii1QWpaAZsCvU1T+T07/WiS1VmjQ2yGCQfs1dbCDZRXs1RmpDaWUcgKExBoh2od1oAR0gd9Yu+UTFGtbqt21KnTlSyxmlY5XZFhMVFwoZysSykwCOZUwTPPXSnQbt+FLblidtN/XSjLRkAncgT486xbG2HeRHpRmASCxHT30qsPTCxdymeR0b61pjdVnlNxe/Z1kb1KXNI7qJdedDumgPTetmLVTEd9XZpBqpEgeM1BoJhabKaOD6UFl/XX6VpZflQbctWTvXnehbz0EtabtUTNAWDrROekawNVY1E1BNB16aqagmqMaAsaoxr2aoJoN414VVauooCCtZOtEEVk1AZVoE7J8D8DXkXUUSq0aK0g20qqPDZeRn1HLzE+nfV7yZWK9DH0oXFTEjccvfp3g61z109MLb0aj+hpNgcWLi5lOoJBHRhGnw9aZWnkfGnCprhr2yny+lEBeVKlaR4Udg7+eQfaHvHUVrjlvxjljr2CANKjLVqnSrZsim9ZERRLMBzrF7yigMnbSgPvCynSW+NE3L8/wCVDAUjRYNydbbeTJ/erf7x/wCbf1X+9UI5HOr/AIg9aA3aqmrNVJoNWag141BFAUr1eNULxQa9aoKxVq2VqCWYVlFbgVlzNBItCNa0w7ZiTQ954UgeHrWjPkUfmbXwFMAON24fN+YD1Gh90UDcphxoyqHlLD12+FLlOgrDOeujC/xKrRKXgVEZyFYcjrCt4ifQnup9bYgsDoVMEfEUoxFvtqe8H310XE7Yzl17g3noD66f0hRJubFurp62/OqFzmGXcHT9c94jvoNrwUSxge8noBWmAxANxGI02AP7JJiT1MaTy5bk0p7Tvk2ffiDAPPpVfviayC6sejHTzqSYmuhyqB9a8yzXhprXmckwKAoFqCu0c60IjmKhJPZQSeZ5CgIIA0Gp7qn7tunwolLASSTJNV+8HT3UGsazJq9ZEUjQ1UJIrzEiozUB7NWRFS5rLOR30GuprZTWGcHuNUdyKCHs/hsaFS5PtGqB9PdQ+fWDtRsDHECD1n0mqFyzyeogdByr125NY23oJvxWDaI6EH5fM0lsnTz+lM7ozIw56/r1pVhtQ3iPnWefWv4742xNqQCOVOj2xG8jXwIoLJ2KPsDsKe4T5U8CzIeKcHdf9ZnLsuuSBCJ+6Bz5ncnXaAKGw2Ikfraule6WOVBLHn076Rca4WbLK6+w+h6K+8eBAJHge6lljr2L/Hnv+NOMBjARlcweRnfx7/jRb8vh8K5YYpUQsx2rrsBg3OG++uKysoLBBqxQayw5MRrHhOugrHLfiPyYzH2MW26V5E0kzuYjfbl76hzEDnAOnQ855+VEhAAk8lnzY7VbNU2BHaOVfyjUnzqyufZQZQPXzqCGY6afLvqXyqMo8+rHvoDygDqx69PCrS/5R6ivZTHQVEHu91BNr+CdeUj93X3b0CT0NdUaHvYZH9pQe/n6jWkrbnDrWNxYpxjOFZVZ0YwoJIPTuakjvMBp05jbzFAVaqZq86dNqyJ60GlzWZavMKzNSFvvIrzc+nL9edZVAfcUBdbhXat0uBjI0Y7g7Hw6UIXryagnmDVEYK/XQjcUswyQ7r0+AbT40fYu5hDbjY0GRlvkfmX5f/moz4vDujFfZq6uSFRdyAJ6VlbPLmdqYYa2LSlmHaPeNB8qMOjPjezbW2vU8++gcehvqyDRY36EajzkVOHz3STymJ5AUVdcIAib9fia0Z705PgNpWxYt3hH3YLlWGjwVVCv51zMp06QelfQMTeFwaGUXXUlQXBkKx35EnmIpfZhHWdY9kkCR1E8j8RTRkR4YjVcxBgFlLcwTt8NulRJpdy+vaqWQKA+RBoFAJgSYWAB8qHxOB1zZww6bEev0FbByGhz2ZXtTLM0BgpUDsmZ029jUkkUHbdkVVAzAyFWTMST7XQCANORpypsUuOQQo0HQVdLAHabc7DoKuCqEkhtT+0NugJGnvqlw9rXnVE87EnSq/d1cwDUfed1BOgNQBQjY5RdFnNL5M2WDOXNlzFlkLr1AnlNZ8b4mMPazftt2bY7+bEdB9Bzqdrss6H41jRP3KmYMuRzbkvl9O+kd5YrDhjkoGOpLMSepJknv33oq6utG9gMwPKqEz7Q19xogryqCm366UwHZD41gy0Q0rryq7WwwkedSAOXSs2WjXtnYUO60GGaptPGleZdaoTGtAEYW5E0o+0Fw50IJHZjQkc55fxUdOvvpfxxwXQD9lST/SP+FLLh4f8ARxwR1V1duStHjp9aaqXvMQNjueQFJsImwMD3cqcW8UAMqaDu508eD8vTO64RAieFCW2CCZ161ARm2EdSTAA6k8vjWtm2nJS7cydEHgOfnrVs1LYZz0XrzPhTS05TQzl6kbeP1rFHY7sB/CB8TUwnMk95PyFLQGXCSBG3TxBGnrtQltMrac1GXooUBSq6bAxr+9VDcCHsswHdqB5GfhWwIMHPsSdMnMQQez51N8WspA9r2diOs6RHMnaO+ofClcssAconmZ5wauHUag5yOe+X/wCq+6sTmuNOp6BNgP4jp8aeNKvOiDck+JqmZPyf/KjUwLdy9+7ep28q0/An87f1jVJZcDwIs23u3m7b9u8xnQAdlROoVV7IHiedcLxzijYi6XMhRoq7ZV1gSOZ3PeegAp19uuOa/hkMhSDcI5tuFnu0J746GuSbYGIO2m0T10G0eE1lldeRpbcrbXQcJOkcsimJmDLfryplQPBkzFtDORT5SQffTFkqseJrMDlVWWP14f41rE+NeKyKomLW5EVPDhIIPWtkX4AfX4iq4ZYdh17Q+BoDO9h9Tr5UE9h+Sn4fGmuIQE/GhLtk8jSpwruW2nVT5a/CsXtzyPmD9KIxNthuAaGB0Pd86k4GdyNDyrfgvDbWJvXBdzdjJlUErnzKZM76ZeXUUPikMTHmNa6HhbZrKDuWO5ogH9HlR0c4Nx/A8Mllnt9l01ANxmDN+yhDExmJy6ayRvtQwYocuTLBII7+hbnr09adoiqUUhCmiyxBOdspXSOcAbgzEUNxhGzdhe00ZhuBykE7gGJ/iUxrpUTbb0Ezs2hB9IA8Ku1x4AUR17/Oqo5/aer/AH3Rifd/j6UyTh0J1bNvtFa3iFjTQ/Gh2STqST0UkeHefdR1jAECXOROSr7R8TM+pNADQWOWDry1zeSLJjximNjhraFyFH72p/qg5R6nwoi04RYtIB8T3nr4mqM4ntvJ6D5nlQGyYe0u/aI/NsPBRCjyFaNixyFY/eL+WoDoeX69aYWa+T+0B4Cq5x+f3V7Jb6e81H3adD60g+YYmWd2OsuxM8ySd61uJ2Y8+nXzFWSyxbQak677wf8AGjk4exgkECNRAkeAnU1i0b4HGmyc0AgqgImIEEnWD3GupNpXEjf9aGuHxwKhRtLWxtJ9ljB6evxpx9l+JF7TSe1bYKSZ1UkhZPOIieQidqvG/pNNr2GIrIN13pjZxCuSp0Ybg767HvHfVb+F5irSXZf8++vNplboYPgdPpVihB11FWUA70G9c2NDvNakaEbxEHu5fCKi4hI2oAC5bB3pddw5UyNjz39aZX16iKGN3L+v1NTThYVg8xPT5Uy+zdxocMGIQ5p/MIYgCeeYfChMUintIYPQ6T4fSt+E4sgoumrtnnfZMpB5RDeRpG620oKODlBOuYS5D8yFII0YdBt11rYvntq5ykgdrK2gaIcT0mf86HwpGY6AmN4AI1IiT+tKpatujtITI7bKADLGGLxoSSZzeIM6VUTQThdlQMecDsjvkmT5miLOELEZmCrz09y7T5bd9WFsLIAAgkaDaN/rNXV9NDM+JJ8dKYa2mVJCKAfzNE+PdUXLuZZJnp8Kyfy16bnyGtSG2AUc9wPhy1NAa2LvKaxvaGZrQ3AOkDuFZWbb3G0EjryHnQGmGVn2WVG5NbhCJG87d3pRtnDi2kTJrJJFAYG1qAD+vOtfwx/RP92pyeZBrX7w9B76CfIU+2jKw/7sAk6xc1A7uwB+vOuwLB1VhBVgInmDB1Bn9A18/OFQnbmOZ6mu4GigdMoHcOzp7qwawBjZYrzOdZ21GUgbb7e6iv8ARkjNavs4BD3bij+FciifNmHlVeJ6ZT1ZT55TqOm3KnX2GQDCCBEsfr8SfWtME5MsdhiDAYgrrbcbr1Ruo5QdxE0XwfixuKUuLldDlboSOnTwrXG7f0xSG37WK/hzeYuCDVpdRfsA0BcEHUeta8Aul7aFjOn1rbGLQADv4bfrWs0uRqTVW2pnwrDI1nOygtJEn6bUArv3CxhQWPSJoNuHO51CJ1LT8tCe6a7FrYAgCKV3tyek/OlThK3DEQZnYEDcscqjwAI+JoQcRTOgQSmYAkqANdCQsTz59OdbZc7S8todyYHgNh5UOLY/ERGmvvWpU6HDMVOs7AA6nsjr3ySZ500w4B5gjpoSe6KV8E1RQdYHzNdBa2pypyhNi1IOQyRE6ydTqeeuvM1mqk+0T7hHurDimt5vL3CKLw2GQsOyKolVAmF1PQamiUwbkScqjxk+7v76suiEjSjU9keFAD2uHINXYsfy7DzA+ZoxrgUAaKBQ15z7j8KGG366mgNbl8v7MgTEmpPjVsgyDTmvxFZ3dKAupjWrffL3UKzTQtAf/9k=" alt="옷1">
+                        <h5 class="head2">[초특가] 세미 정장</h4>
+                        <del class="text-white m-size font-weight-bold">91,000원</del>
+                        <h6 class="text-white font-weight-bold m-size">79,900원</h4>
+                    </a></li>
+                    <li class="nav-item best"><a href="#" class="nav-link">
+                        <img class="img-size1" src="https://i.pinimg.com/originals/ea/a8/f5/eaa8f5af9afe9cc3862ec9b1b968734c.jpg" alt="">
+                        <h5 class="head2">[한정 판매] 데님 청바지</h4>
+                        <del class="text-white m-size font-weight-bold">33,000원</del>
+                        <h6 class="text-white font-weight-bold m-size">29,900원</h4>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+        <footer class="d-flex justify-content-center">
+            <div class="text-secondary text-center">
+                회사 : Sangman <br>
+                대표 : 김상남 <br>
+                주소 : 서울시 종로구 아무개로 32번길 93 패션타운 806호 <br>
+                사업자 번호 : 10101010101-01010101010 <br>
+                Copyright 2021. sangman All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

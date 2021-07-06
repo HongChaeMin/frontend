@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userId = "my_id_very_simple";
+        if (userId.length > 8) {
+            console.log("id는 8자를 넘길 수 없습니다 : " + userId.slice(0, 8));
+        }
+
+        var path = "/Users/master/Document/image/city.jpg";
+        var file = path.split('/');
+        console.log(file[file.length-1]);
+
+        var info = {
+            "name":"신보람",
+            "phoneNumber":"01012345678",
+            "introduce":"    안녕하세요. 저는 고양이 집사입니다.   "
+        };
+        console.log("이름 : " + info.name + " 전화번호 : " + info.phoneNumber + " " +  info.introduce.trim());
+
+        var membersString = "루피:19931005,조로:19890513,나미:19970705,쵸파:20040932";
+        var member = membersString.split(",");
+        var mamberList = [];
+        
+    </script>
+</body>
+</html>

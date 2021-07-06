@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_quiz</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+        <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        .square {width: 100px; height: 100px; background-color: blue;}
+        .changeSquare {width: 200px; height: 200px; background-color: darkorange;}
+        #imgs {position: relative;}
+        .img {width: 400px; opacity: 0; position: absolute;}
+        .img:first-child {opacity: 1;}
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $('#check').on('click', function () {
+                var password = $('.password').val();
+                var checkPassword = $('.checkPassword').val();
+
+                if (password.length < 1 || checkPassword.length < 1) {
+                    alert("비밀번호를 입력해주세요");
+                    return;
+                }
+
+                if (password != checkPassword) {
+                    alert("비밀번호가 일치하지 않습니다");
+                    return;
+                }
+                
+                alert("확인 완료");
+
+            });
+
+            $('.checkProhibit').on('click', function () {
+                var bannedWords = ["십장생", "시베리아", "조카신발", "쌍쌍바", "십원짜리"];
+                var prohibit = $('.prohibit').val();
+
+                for (let banned of bannedWords) {
+                    if (prohibit.includes(banned)) {
+                        alert("금칙어가 포함되어 있습니다. 검색할 수 없습니다");
+                        return;
+                    }
+                }
+            });
+
+            $('.plus').on('click', function () {
+                if ($('.textDiv').is(':visible')) {
+                    $('.textDiv').hide();
+                    $('.plus').text('더보기');
+                } else {
+                    $('.textDiv').show();
+                    $('.plus').text('닫기');
+                }
+            });
+
+            $('.change').on('click', function () {
+                if ($('#divSquare').hasClass('square')) {
+                    $('#divSquare').removeClass('square');
+                    $('#divSquare').addClass('changeSquare');
+                } else {
+                    $('#divSquare').removeClass('changeSquare');
+                    $('#divSquare').addClass('square');
+                }
+            });
+
+            $('#next').on('click', function () {
+                // on 클래스가 있는 자리
+                var imgOn = $('#imgs').find(".on").index();
+                // 총 이미지 사이즈
+                let imgLen = $('#imgs .img').length;
+
+                // on이 있던 이미지에서 on을 지우고
+                $('#imgs .img').eq(imgOn).removeClass('on');
+                $('#imgs .img').eq(imgOn).css("opacity", 0);
+
+                // 다음장으로 가기 위해 1을 더해준다음
+                imgOn += 1;
+
+                if (imgOn == imgLen) { // 다음 장이 더이상 없으면
+                    // 처음으로 돌아가서 이미지를 보여준다
+                    $('#imgs .img').eq(0).css("opacity", 1);
+                    // on도 표시해줌
+                    $('#imgs .img').eq(0).addClass('on');
+                } else { // 아니면 그냥 그대로 이미지를 보여준다
+                    $('#imgs .img').eq(imgOn).css("opacity", 1);
+                    $('#imgs .img').eq(imgOn).addClass('on');
+                }
+
+            });
+
+            $('#prev').on('click', function () {
+                var imgOn = $('#imgs').find(".on").index();
+                let imgLen = $('#imgs .img').length;
+
+                $('#imgs .img').eq(imgOn).removeClass('on');
+                $('#imgs .img').eq(imgOn).css("opacity", 0);
+
+                imgOn -= 1;
+
+                if (imgOn < 0) {
+                    $('#imgs .img').eq(imgLen - 1).css("opacity", 1);
+                    $('#imgs .img').eq(imgLen - 1).addClass('on');
+                } else {
+                    $('#imgs .img').eq(imgOn).css("opacity", 1);
+                    $('#imgs .img').eq(imgOn).addClass('on');
+                }
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>1. 비밀번호 일치</h1>
+    비밀번호 : <input class="password" type="password">
+    비밀번호 확인 : <input class="checkPassword" type="password">
+    <button id="check" type="button">확인</button>
+    <hr>
+
+    <h1>2. 금칙어 포함 여부 확인</h1>
+    <input type="text" class="prohibit">
+    <button type="button" class="checkProhibit">검색</button>
+    <hr>
+
+    <h1>3. 더보기</h1>
+    <button type="button" class="plus">더보기</button>
+    <div class="textDiv">
+        숨겨져 있던 추가 설명입니다!!! <br>
+        더보기를 누르면 나옵니다
+    </div>
+    <hr>
+
+    <h1>4. 사각형 바꾸기</h1>
+    <div id="divSquare" class="square"></div>
+    <br>
+    <button class="change">교체</button>
+    <hr>
+
+    <h1>5. 이미지 교체</h1>
+    <div class="d-flex justify-content-start align-items-end">
+        <button id="prev" class="item">이전</button>
+        <div id="imgs" class="item">
+            <img class="img on" src="../quiz/ocean-1867285_1920.jpg" alt="img1">
+            <img class="img" src="../quiz/sunrise-1014712_1920.jpg" alt="img2">
+            <img class="img" src="../quiz/sunset-1985086_1920.jpg" alt="img3">
+        </div>
+        <button id="next" class="item">다음</button>
+    </div>
+    
+</body>
+</html>

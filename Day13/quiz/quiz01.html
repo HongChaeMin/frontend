@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz01</title>
+
+    <style>
+        #colorBox {width: 100px; height: 100px; background-color: blue;}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#choesColor').change(function () {
+                var selectedVal = $('#choesColor option:selected').val();
+                    $('#colorBox').css('background-color', selectedVal);
+            });
+
+            $('input[name=job]').change(function () {
+                var job = $(this).val(); // 선택된 radio 버튼의 value를 가져온다
+                if (job == 'student') {
+                    $('#change').text('학교명');
+                } else {
+                    $('#change').text('직장명');
+                }
+
+            });
+
+            $('#allCheck').change(function () {
+                var isAllChecked = $(this).is(':checked');
+                if (isAllChecked) {
+                    $('input[name=check]').prop('checked', true);
+                } else {
+                    $('input[name=check]').prop('checked', false);
+                }
+            });
+
+            $('#textBox').on('keyup', function () {
+                if($('#textBox').val().length > 4) {
+                    alert("5자 이상을 초과하여 입력할 수 없습니다");
+                    $('#textBox').val($('#textBox').val().substring(0, 5));
+                    return;
+                }
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <h1>1. 색 바꾸기</h1>
+    <div id="colorBox"></div>
+    <select id="choesColor">
+        <option selected value="choes">-- 색 선택 --</option> <!-- selected (셀렉티드 프로퍼티) : 기본으로 설정되어 있는 것 -->
+        <option value="blue">파란색</option>
+        <option value="red">빨간색</option>
+        <option value="green">녹색</option>
+        <option value="purple">자주색</option>
+    </select>
+
+    <hr>
+
+    <h1>2. 입력 바꾸기</h1>
+    <label>학생<input type="radio" id="student" name="job" value="student"></label>
+    <label>직장인<input type="radio" id="workman" name="job" value="workman"></label>
+    <br>
+    <span id="change">학교명</span><input type="text">
+
+    <h1>3. 전체 선택</h1>
+    <label>전체 선택 <input type="checkbox" id="allCheck"> <br></label> 
+    <label>개인정보 활용 동의 <input type="checkbox" name="check" id="check1"></label>
+    <label>서비스 이용 동의 <input type="checkbox" name="check" id="check2"></label> 
+    <label>마케팅 활용 동의 <input type="checkbox" name="check" id="check3"></label> 
+
+    <h1>4. 길이 제한</h1>
+    <input type="text" id="textBox">
+</body>
+</html>

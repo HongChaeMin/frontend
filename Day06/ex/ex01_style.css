@@ -1,0 +1,10 @@
+*{margin: auto;}
+.flex-row {display: flex;}
+#warp {max-width: 1200px;}
+header {height: 100px; background-color: rgb(86, 128, 207);}
+nav {height: 50px; background-color: rgb(63, 98, 161);}
+.contents {height: 450px; background-color: rgb(180, 206, 255);}
+.contents > .content {flex-grow: 7; height: 450px; background-color: rgb(90, 147, 253);}
+.contents > aside {flex-grow: 3;  height : 450px; background-color: rgb(133, 176, 255);}
+.contents > .content > .at1 {max-width: 700px; height: 200px; background-color: rgb(189, 212, 255); margin-top: 15px;}
+footer {height: 200px; background-color: rgb(189, 212, 255);}

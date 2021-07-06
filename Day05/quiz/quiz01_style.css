@@ -1,0 +1,9 @@
+#div1 {background-color: cadetblue;}
+#div2 {background-color: rgb(62, 119, 121);}
+#div3 {background-color: rgb(159, 217, 219);}
+#div4 {background-color: rgb(112, 204, 207);}
+#layer {margin: 10px;}
+.box-size-100 {width: 100px; height: 100px;}
+.box-size-100-magin {margin: 10px; width: 100px; height: 100px;}
+.flex-row {display: flex; justify-content: left;}
+.flex-center {display: flex; justify-content: center;}

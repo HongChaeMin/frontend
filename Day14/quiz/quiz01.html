@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz01</title>
+
+    <style>
+        body {width: 600px; margin-left: 10px;}
+    </style>
+
+    <!-- jQuery가 datepicker 라이브러리 위에 있어야 한다. (데이터피커가 jquery를 사용하기 때문) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
+
+    <!-- datepicker 라이브러리 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1 class="font-weight-bold">행사 일정 입력</h1>
+
+    <br>
+
+    <p>
+        <span>행사 제목</span>
+        <input type="text" class="form-control mt-3">
+    </p>
+
+    <div class="d-flex">
+        <div class="d-flex col-6 justify-content-center align-items-center">
+            <div class="col-4">시작일</div>
+            <input id="start" type="text" class="form-control col-8">
+        </div>
+        <div class="d-flex col-6 justify-content-center align-items-center">
+            <div class="col-4">종료일</div>
+            <input id="end" type="text" class="form-control col-8">
+        </div>
+    </div>
+
+    <br>
+
+    <button class="btn btn-info w-100">저장</button>
+
+    <script>
+        $(document).ready(function () {
+            // 모든 데이트피커의 요일을 한글로 변경 설정
+            $.datepicker.setDefaults({
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']
+                , dateFormat: 'yy-mm-dd'
+                , currentText: '오늘' // 'Today' 버튼을 한글로 '오늘 표현'
+            });
+
+            function today () {
+                var today = new Date();
+
+                var year = today.getFullYear();
+                var month = today.getMonth();
+                var day = today.getDay();
+
+                var setting =  day + '/' + month + '/' + year;
+           };
+
+            $('#start').datepicker({
+                minDate: 0 // 오늘 날짜 부터 선택 될 수 있게
+                , showButtonPanel: true // 오늘 버튼 노출
+
+                // 시작일이 선택되는 순간 종료일의 minDate
+                , onSelect:function(dateText) {
+                    $('#end').datepicker('option', 'minDate', dateText);
+                }
+            });
+
+            $('#end').datepicker({
+                minDate: 0
+            });
+        });
+    </script>
+
+</body>
+</html>

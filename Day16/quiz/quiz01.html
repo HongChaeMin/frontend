@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>통나무 펜션</title>
+
+    <link rel="stylesheet" href="quiz01_style.css" type="text/css">
+
+    <!-- jQuery가 datepicker 라이브러리 위에 있어야 한다. (데이터피커가 jquery를 사용하기 때문) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- datepicker 라이브러리 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap" class="container">
+        <header class="d-flex justify-content-center align-items-center">
+            <div class="display-4">통나무 펜션</div>
+        </header>
+        <nav>
+            <ul class="d-flex justify-content-around align-items-center nav nav-fill">
+                <li class="nav-item"><a href="#" class="nav-link menu">펜션소개</a></li>
+                <li class="nav-item"><a href="#" class="nav-link menu">객실보기</a></li>
+                <li class="nav-item"><a href="#" class="nav-link menu">예약안내</a></li>
+                <li class="nav-item"><a href="#" class="nav-link menu">커뮤니티</a></li>
+            </ul>
+        </nav>
+        <section class="contents">
+            <section class="content1">
+                <div id="imgs">
+                    <img width="100%" class="img1" src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner1.jpg" alt="img1">
+                    <img width="100%" class="d-none img2" src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner2.jpg" alt="img2">
+                    <img width="100%" class="d-none img3" src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner3.jpg" alt="img3">
+                    <img width="100%" class="d-none img4" src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner4.jpg" alt="img4">
+                </div>
+            </section>
+            <section class="content2 d-flex">
+                <article class="d-flex justify-content-center align-items-center col-4 bg-color-gar">
+                    <div class="font-size-40 text-white">실시간 <br> 예약 하기</div>
+                </article>
+                <article class="col-5 bg-color-yeangar">
+                    <div class="d-flex mt-4">
+                        <div class="mr-4">
+                            <span class="check">예약 확인</span>
+                        </div>
+                        <div id="choesMember" class="d-flex align-items-end">
+                            <label class="member mr-4 color-whilt">회원<input type="radio" name="choes" checked></label>
+                            <label class="notMember color-whilt">비 회원<input type="radio" name="choes"></label>
+                        </div>
+                    </div>
+                    <div id="member">
+                        <div class="d-flex mt-4 mr-4 justify-content-end">
+                            <div class="color-whilt mr-3 mt-2">아이디 :</div>
+                            <div><input type="text" id="id" class="form-control"></div>
+                        </div>
+                        <div class="d-flex mt-4 mr-4 justify-content-end">
+                            <div class="color-whilt mt-2 mr-3">비밀번호 :</div>
+                            <div><input type="password" id="password" class="form-control"></div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <btuuon id="btn" type="button" class="btn btn-success">조회 하기</btuuon>
+                        </div>
+                    </div>
+                    <div id="notMember" class="d-none">
+                        <div class="d-flex mt-2 mr-4 justify-content-end">
+                            <div class="color-whilt mr-3 mt-2">이름 :</div>
+                            <div><input type="text" id="name" class="form-control"></div>
+                        </div>
+                        <div class="d-flex mt-4 mr-4 justify-content-end">
+                            <div class="color-whilt mt-2 mr-3">전화번호 :</div>
+                            <div><input type="text" id="phoneNumber" class="form-control"></div>
+                        </div>
+                        <div class="d-flex mt-4 mr-4 justify-content-end">
+                            <div class="color-whilt mt-2 mr-3">날짜 :</div>
+                            <div><input type="text" id="day" class="form-control"></div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-2">
+                            <btuuon id="notMemberBtn" type="button" class="btn btn-success">조회 하기</btuuon>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-3 bg-color-gar d-flex justify-content-center align-items-center">
+                    <div>
+                        <h4 class="color-whilt">예약문의 :</h4>
+                        <h1 class="color-whilt">010-</h1>
+                        <h1 class="color-whilt">000-1111</h1>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <footer>
+            <div class="text-secondary mt-4 ml-4">
+                제주특별자치도 제주시 애월읍<br>
+                사업자 등록번호 : 111-22-255222 / 농어촌민박사업자지정 / 대표:김동욱<br>
+                Copyright 2025 tongnamu All right reserved
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            var i = 1;
+            var time = setTimeout(function changeImg(j) {
+                var img = ".img" + i;
+                $(img).addClass('d-none');
+                i++;
+                if (i > 4) {
+                    i = 1;
+                }
+                var newImg = ".img" + i;
+                $(newImg).removeClass('d-none');
+
+                console.log(img);
+                console.log(newImg);
+
+                time = setTimeout(changeImg, 3000, i);
+            }, 3000);
+
+
+            $('.member').on('click', function () {
+                $('#member').removeClass('d-none');
+                $('#notMember').addClass('d-none')
+            });
+
+            $('.notMember').on('click', function () {
+                $('#notMember').removeClass('d-none');
+                $('#member').addClass('d-none');
+            });
+
+            $('#notMemberBtn').on('click', function () {
+                var check = $('#phoneNumber').val().substring(0, 3);
+                if (check != '010' || check.length < 1) {
+                    alert("010 으로 시작하는 번호만 입력 가능합니다");
+
+                }
+            });
+
+            $('#day').datepicker({
+
+            });
+
+            $.datepicker.setDefaults({
+                dateFormat: 'yy년 mm월 dd일'
+                , minDate: 0
+            });
+
+        });
+    </script>
+</body>
+</html>

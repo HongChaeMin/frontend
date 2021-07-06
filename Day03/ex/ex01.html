@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>내부 스타일 시트 적용하기</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8">
+
+        <!-- HTML 파일 내에 스타일 시트 정의 -->
+        <style>
+            /* 문서 전체에 효과 주기  */
+            * {color: #5F9EA0;}
+
+            /* 태그에 꾸미기 효과 주기 */
+            h3 {color: #87C6C8; text-align: center;}
+            body {background-color: darkslategray;}
+            span {color: mediumaquamarine; font-size: 40px; font-weight: bold;}
+            a {text-decoration: none; color: mediumseagreen;}
+
+            /* id에 꾸미기 효과 주기 */
+            #text1 {color: rgb(46, 145, 99);font-size: 20px;}
+            #text2 {color: cadetblue; font-size: 25px; font-style: italic;}
+            #text3 {color: darkgreen; font-size: 20px;}
+
+            /* class에 꾸미기 효과 주기 */
+            .text {background-color: darkcyan;font-size: 18px;}
+            .text-color-white {color: #fff; font-weight: normal;}
+        </style>
+    </head>
+
+    <body>
+        그냥 글씨를 써봅시다
+        <h3>스타일시트 내용이 적용된 제목 3 입니다</h3>
+
+        <!-- 글씨를 담는 태그 -->
+        <span>글씨가 들어가는 span 태그</span><br>
+        <span>span 태그</span><br>
+
+        <!-- 앵커(anchor) 태그 -->
+        <a href="naver.com">네이버</a><br>
+
+        <!-- id  속성 : 태그에 '유일한 이름'을 지정해준다 (중복되지 않게) -->
+        <span id="text1">글씨 효과를 개별로 주고 싶다면...?</span><br>
+        <span id="text2">이번 글씨에는 또 다른 효과를 준다</span><br>
+
+        <!-- class 속성 : 태그에 '별명'을 지정해준다(중복가능) -->
+        <span class="text">글자의 배경이 초록색으로 칠해지는 효과를 준다</span><br>
+        <span id="text3" class="text">text3 효과와 글자 배경이 노란색으로 칠해지는 효과</span><br>
+        <span class="text text-color-white">글자색은 흰색, 배경색은 초록색</span><br>
+
+        <!-- 인라인(inline) 스타일 주기 -->
+        <span style="color: white; font-weight: lighter; font-size: 20px;">내 이름은 코난, 탐정이죠</span><br>
+        <!-- 인라인 스타일이 우선 순위가 제일 높다 (쓰지마) -->
+        <span style="color: wheat;" class="text-color-white text">미란아!!</span>
+
+        <!-- web_front_end : snack -->
+        <!-- webFrontEnd : camel-->
+        <!-- web-front-end : 이름은 없는데 보통 클래스랑 아이디를 이렇게 만듬-->
+    </body>
+</html>

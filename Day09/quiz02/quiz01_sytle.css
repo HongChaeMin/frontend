@@ -1,0 +1,8 @@
+#wrap {width: 1000px; margin-left: auto; margin-right: auto;}
+header {height: 100px;}
+.login {color: black;}
+aside {margin: 10px;}
+.contents {height: 500px;}
+.menu {font-weight: bold;; height: 50px;}
+.menu:hover {background-color: dimgray; }
+.somenail {margin: 10px; width: 300px;}

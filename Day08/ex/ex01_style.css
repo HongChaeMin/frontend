@@ -1,0 +1,11 @@
+header {height: 100px;}
+.logo {height: 50px; font-size: 30px; font-weight: bold;}
+nav {height: 50px;}
+.contents {height: 300px;}
+footer {height: 100px;}
+.nav-link {color: black; font-weight: bold;}
+/*  
+    text-{color} 클래스를 주면 hover가 먹히지 않는 현상 발생
+    해결하려면 아래와 같이 주거나, 부트스트랩이 아닌 CSS 컬러를 따로 준다
+*/
+.nav-item .nav-link:hover {color: #fff !important;}

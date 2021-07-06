@@ -1,0 +1,14 @@
+header {height: 200px; }
+.login {color:rgb(83, 83, 83);font-size: 20px;}
+.logo {font-size: 80px;}
+.login:hover {color: rgb(184, 184, 184);}
+.menu {height: 50px; background-color: rgb(209, 209, 209);}
+.s-menu {font-size: 25px; color: #000; margin: 0; padding: 0;}
+.s-menu:hover {background: #000; color: rgb(209, 209, 209);}
+.content1 {height: 400px;}
+.content2 {height: 500px;}
+.head {color: rgb(48, 48, 48); font-weight: bold;}
+.m-size {font-size: 18px;}
+.img-size {width: 170px; height: 250px; padding-bottom: 10px; margin : 5px}
+.best:hover {background-color: black;}
+.nav-item > .nav-link .head:hover {color: #fff;}

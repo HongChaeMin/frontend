@@ -1,0 +1,7 @@
+header {height: 100px;}
+.login {color:rgb(83, 83, 83);}
+.login:hover {color: rgb(184, 184, 184);}
+.menu {height: 50px; background-color: rgb(209, 209, 209);}
+.s-menu {font-size: 25px; color: #000; }
+.s-menu:hover {background: #000; color: rgb(209, 209, 209);}
+.content1 {height: 300px;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>자바 스크립트 기본 예제</title>
+</head>
+<body>
+    <!-- javascript 영역 -->
+    <script>
+        // 한 줄 주석
+        /*
+            여러줄
+            주석
+        */
+
+        // integer 변수 선언
+        var number = 100;
+        //alert(number);
+        console.log('number : ' + number); // 브라우저 > 검사 > console 탭에 뜸
+
+        // string 변수 선언
+        var str = "Hello World!";
+        console.log("str : " + str);
+
+        // if 문
+        if (number == 100) {
+            console.log("number는 100");
+            var a = 5;
+            let b = 5; // let으로 선언된 변수는 지역 변수라서 밖에서 사용이 안 됨
+        }
+        console.log("a : " + a);
+        // console.log("b : " + b); 에러 : let으로 선언된 변수는 지역 변수이므로 block 사용 불가
+
+        // if문으로 String 비교
+        if (str == "Hello World!") {
+            console.log("Hello World!가 맞다")
+        }
+
+        // 문자열로 된 숫자와 숫자 비교 '3' 3
+        let strNum = '10';
+        let num = 10;
+        if (strNum == num) {
+            console.log("같은 숫자이다 == 비교")
+        }
+
+        if (strNum === num) {
+            console.log("같은 숫자이다 === 비교")
+        }
+    </script>
+</body>
+</html>

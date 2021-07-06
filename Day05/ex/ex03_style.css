@@ -1,0 +1,7 @@
+* {margin: auto;}
+#wrap {width: 1200px; height: 1000px; background-color: #000;}
+header {width: 1200px; height: 100px; background-color: lightseagreen;}
+nav {height: 50px; background-color: rgb(26, 145, 139);}
+.flex-row {display: flex;}
+.contents {height: 650px; background-color: rgb(124, 204, 200);}
+footer {height: 200px; background-color: rgb(44, 133, 128);}

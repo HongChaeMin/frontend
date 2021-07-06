@@ -1,0 +1,10 @@
+body {margin: 0;}
+#wrap {width: 1200px; height: 1000px; justify-content: center;}
+.flex-row {display: flex;}
+.head1 {height: 100px; background-color: rgb(132, 59, 201);}
+.head2 {height: 50px; background-color: rgb(162, 99, 221);}
+section {height: 700px;}
+section > .contents1 {width: 900px; background-color: rgb(194, 170, 216);}
+section > .contents2 {width: 300px; background-color: rgb(156, 121, 189);}
+footer {height: 150px; background-color: rgb(132, 59, 201);}
+.contents1 > .contents1-box {width: 700px; height: 300px; background-color: rgb(156, 121, 189); margin-top: 30px ; margin-left: 100px; margin-right: 100px;}

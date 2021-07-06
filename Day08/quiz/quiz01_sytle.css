@@ -1,0 +1,8 @@
+header {height: 100px;}
+li {font-weight: bold; font-size: 20px;}
+.nav-item > .nav-link:hover {color: rgb(166, 213, 214) !important;}
+.contents {height: 500px;}
+input {width: 100%;}
+footer {height: 100px;}
+.s-logo {font-size: 30px; font-weight: bold;}
+footer > .number {font-size: 20px; font-weight: bold; }

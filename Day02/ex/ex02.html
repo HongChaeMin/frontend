@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>테이블 태그</title>
+        <style>
+            table{text-align: center; border: turquoise;}
+        </style>
+    </head>
+
+    <body>
+        <!-- 테이블 태그 : 표를 만든다 -->
+        <!-- table tr td, th 등등 -->
+        <table border="1">
+            <!-- tr: 한 행의 묶음 -->
+            <tr>
+                <!-- td : 셀 한 칸 -->
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <!-- 두 번 째 행 -->
+            <tr>
+                <td>짱구</td>
+                <td>맹구</td>
+                <td>철수</td>
+                <td>유리</td>
+            </tr>
+        </table>
+        <hr>
+
+        <table border="1" width="500">
+            <thead>
+                <tr> <!-- 한 행 -->
+                    <!-- th : 한 셀, 제목 -->
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>첫 번 째 글</td>
+                    <td>홍채민</td>
+                    <td>2021/05/14 </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>secound</td>
+                    <td>coals</td>
+                    <td>1999/09/09</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 셀 합치기 -->
+        <!-- 행 병합(merge) : rowspan -->
+        <h2>행 병합</h2>
+        <table border="1" width="500">
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <!-- 병합 후 나머지 칸은 제거 -->
+                <!-- <td>4</td> -->
+                <td>5</td>
+                <!-- <td>6</td> -->
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- 열 병합 (merge) : colspan -->
+        <h2>열 병합</h2>
+        <table border="1" width="500">
+            <tr>
+                <!-- 2, 3번 셀을 병합한다-->
+                <td>1</td>
+                <td colspan="2">2</td>
+                <!-- <td>3</td> -->
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <!-- 7, 8, 9번 셀을 병합한다 -->
+                <td colspan="3">7</td>
+                <!-- <td>8</td>
+                <td>9</td>-->
+            </tr>
+        </table>
+    </body>
+</html>
